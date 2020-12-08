@@ -6,7 +6,7 @@ namespace NovemberProjekt
     public class Crime
     {
         
-    public List<string> crimes = new List<string>()
+    public static List<string> crimes = new List<string>()
     {"Incest","Mord"};
 
     public List<string> description = new List<string>()
@@ -17,6 +17,11 @@ namespace NovemberProjekt
 
         
 
+    
+
 
     }
+
+
+
 }

@@ -10,11 +10,14 @@ namespace NovemberProjekt
 
         public string name;
 
-        public string activeCrime;
+        public int activeCrime;
+
+        
 
 
-        public Court(string n)
+        public Court(string n, List<string> crimes)
         {
+        
             activeCrime = generator.Next(crimes.Count);
         }
     }
