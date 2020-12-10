@@ -1,3 +1,5 @@
+using System.Runtime.ConstrainedExecution;
+using System.Security.Cryptography;
 using Microsoft.Win32.SafeHandles;
 using System.Collections.Generic;
 using System;
@@ -10,7 +12,9 @@ namespace NovemberProjekt
 
         public string name;
 
-        public int activeCrime;
+        public int crimeCount;
+
+        public string activeCrime;
 
         
 
@@ -18,8 +22,25 @@ namespace NovemberProjekt
         public Court(string n, List<string> crimes)
         {
         
-            activeCrime = generator.Next(crimes.Count);
+            name = n;
+
+            crimeCount = generator.Next(crimes.Count);
+
+            string activeCrime = crimes[crimeCount];
+
+            System.Console.WriteLine(activeCrime);
+
+            
+
+
         }
+        public void Present(string n, string activeCrime)
+        {
+
+            System.Console.WriteLine("Välkommen till domstolen åklagare " + n);
+
+        }
+
     }
 
 }

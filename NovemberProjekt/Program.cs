@@ -11,7 +11,7 @@ namespace NovemberProjekt
 
             string n = Console.ReadLine();
 
-            System.Console.WriteLine("Välkommen till domstolen åklagare " + n);
+            Court newCourt = new Court(n);
 
 
             Console.ReadLine();
