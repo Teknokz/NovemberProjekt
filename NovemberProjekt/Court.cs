@@ -16,11 +16,20 @@ namespace NovemberProjekt
 
         public string activeCrime;
 
+        Crime newcrime = new Crime();
+
+        public void GetList();
+        {
+            List<string> calledlist = crimes.GetList();
+        }
+
         
 
 
         public Court(string n, List<string> crimes)
         {
+
+
         
             name = n;
 
@@ -34,10 +43,12 @@ namespace NovemberProjekt
 
 
         }
-        public void Present(string n, string activeCrime)
+        public string Present(string n, string activeCrime)
         {
 
-            System.Console.WriteLine("Välkommen till domstolen åklagare " + n);
+            string write = System.Console.WriteLine("Välkommen till domstolen åklagare " + n);
+
+            
 
         }
 
