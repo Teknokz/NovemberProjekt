@@ -8,47 +8,21 @@ namespace NovemberProjekt
 {
     public class Court
     {
-        public static Random generator = new Random();
-
         public string name;
 
-        public int crimeCount;
-
-        public string activeCrime;
-
-        Crime newcrime = new Crime();
-
-        public void GetList();
-        {
-            List<string> calledlist = crimes.GetList();
-        }
-
+        //Crime newcrime = new Crime();
         
-
-
-        public Court(string n, List<string> crimes)
+        public Court(string n)
         {
-
-
-        
+            
             name = n;
+            
+            System.Console.WriteLine("Välkommen Åklagare " + n);
 
-            crimeCount = generator.Next(crimes.Count);
 
-            string activeCrime = crimes[crimeCount];
-
-            System.Console.WriteLine(activeCrime);
 
             
 
-
-        }
-        public string Present(string n, string activeCrime)
-        {
-
-            string write = System.Console.WriteLine("Välkommen till domstolen åklagare " + n);
-
-            
 
         }
 
