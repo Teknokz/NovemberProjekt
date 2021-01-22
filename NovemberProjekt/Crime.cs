@@ -6,7 +6,7 @@ namespace NovemberProjekt
     public class Crime
     {
 
-     public int crimeCount;
+    public static int crimeCount;
 
     public string activeCrime;
 
@@ -14,7 +14,7 @@ namespace NovemberProjekt
 
 
         
-    private List<string> crimes = new List<string>()
+    public static List<string> crimes = new List<string>()
     {"Incest","Mord"};
 
  
@@ -24,19 +24,11 @@ namespace NovemberProjekt
     
     };
 
-        public Crime(List<string> crimes)
+        public Crime()
         {
             crimeCount = generator.Next(crimes.Count);
 
             string activeCrime = crimes[crimeCount];
-
-            System.Console.WriteLine(activeCrime);
-        }
-
-        public void Present()
-        {
-            System.Console.WriteLine(crimes[crimeCount]);
-
         }
 
         

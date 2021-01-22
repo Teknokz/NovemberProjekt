@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata;
+﻿using Microsoft.Win32.SafeHandles;
+using System.Reflection.Metadata;
 using System;
 using System.Collections.Generic;
 
@@ -8,6 +9,10 @@ namespace NovemberProjekt
     {
         static void Main(string[] args)
         {
+
+            //Medans gameActive = 1 så är spelet igång
+
+            int gameActive = 1;
             
             int userguess = 0;
 
@@ -15,9 +20,14 @@ namespace NovemberProjekt
 
             string n = Console.ReadLine();
 
-            
+            //Skapar instansen Court som tar n och skriver ut välkommen... + n
 
             Court newCourt = new Court(n);
+
+            // Denna while loopen körs medans gameactive == 1 (Ganeactive blir 0 när spelaren förlorat eller vunnit)
+
+            while(gameActive == 1)
+            {
 
             System.Console.WriteLine("Hur vill du gå tillväga?");
             System.Console.WriteLine("1) Lägga till fler brott i brottslagret");
@@ -29,7 +39,20 @@ namespace NovemberProjekt
 
             if(userguess == 1)
             {
+                
+                Console.Clear();
+
+                Crime laws = new Crime();
+
                 System.Console.WriteLine("1");
+                System.Console.WriteLine("Vilket brott vill du lägga till?");
+
+                input = Console.ReadLine(); 
+
+                Crime.crimes.Add(input);
+
+                System.Console.WriteLine("Added " + input);
+
             }
             else if(userguess == 2)
             {
@@ -37,7 +60,7 @@ namespace NovemberProjekt
 
                  //Crime newCrime = new Crime();
 
-                 Crime.Present();
+            }   
 
             }
             
