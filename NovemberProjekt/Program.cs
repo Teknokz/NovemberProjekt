@@ -37,6 +37,8 @@ namespace NovemberProjekt
             
             bool success = int.TryParse(input, out userguess);
 
+            //Om userguess == 1 så körs instasen och tillåter spelaren att lägga till fler brott
+
             if(userguess == 1)
             {
                 
@@ -54,6 +56,9 @@ namespace NovemberProjekt
                 System.Console.WriteLine("Added " + input);
 
             }
+
+            //Om userguess å andra sidan är == 2 så fortsätter spelet...
+
             else if(userguess == 2)
             {
                 System.Console.WriteLine("2");
